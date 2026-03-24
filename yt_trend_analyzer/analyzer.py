@@ -1,6 +1,7 @@
 # src/yt_trend_analyzer/analyzer.py
 
 from googleapiclient.discovery import build
+from yt_trend_analyzer.constants import DEFAULT_MAX_RESULTS
 import duckdb
 
 class YouTubeTrendAnalyzer:
@@ -22,7 +23,7 @@ class YouTubeTrendAnalyzer:
         )
         """)
 
-    def search_and_store(self, search_terms: list[str], max_results: int = 5):
+    def search_and_store(self, search_terms: list[str], max_results: int = DEFAULT_MAX_RESULTS):
         """Search YouTube for each term and store in the database."""
         for term in search_terms:
             print(f"Searching: {term}")
