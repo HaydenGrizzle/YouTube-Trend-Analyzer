@@ -2,6 +2,7 @@
 
 import argparse
 from yt_trend_analyzer.analyzer import YouTubeTrendAnalyzer
+from yt_trend_analyzer.constants import DEFAULT_DB_PATH
 
 def main():
     """Command-line interface for YouTube Trend Analyzer."""
@@ -25,7 +26,7 @@ def main():
 
     parser.add_argument(
         "--db",
-        default="data/LocalDatabase_Yt.db",
+        default=DEFAULT_DB_PATH,
         help="Path to the DuckDB database"
     )
 
