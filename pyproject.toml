@@ -1,0 +1,16 @@
+[project]
+name = "yt-trend-analyzer"
+version = "0.1.0"
+description = "YouTube trend analyzer using DuckDB"
+requires-python = ">=3.9"
+dependencies = [
+    "google-api-python-client",
+    "duckdb"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yt_trend_analyzer*"]
+
+[project.scripts]
+yt-trend = "yt_trend_analyzer.main:main"
